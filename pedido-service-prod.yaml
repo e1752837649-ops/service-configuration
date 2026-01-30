@@ -1,0 +1,27 @@
+pedido:
+  property: Pedido Profile Prod
+
+server:
+  port: 8082
+
+spring:
+  application:
+    name: pedido-service
+  datasource:
+    url: jdbc:mysql://prod-server:3306/db_pedido?useSSL=false&serverTimezone=UTC
+    username: prod_user
+    password: prod_password
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  jpa:
+    show-sql: false
+    hibernate:
+      ddl-auto: none
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL8Dialect
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://prod-eureka:8761/eureka/

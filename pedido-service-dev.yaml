@@ -1,0 +1,31 @@
+# Propiedades personalizadas del microservicio
+pedido:
+  property: Pedido Profile Dev
+
+# Configuración del servidor
+server:
+  port: 8082
+
+# Configuración de la aplicación y base de datos
+spring:
+  application:
+    name: pedido-service
+  datasource:
+    url: jdbc:mysql://localhost:3306/db_pedido?useSSL=false&serverTimezone=UTC
+    username: root
+    password:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL8Dialect
+
+# Configuración de Eureka
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
