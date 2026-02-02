@@ -3,9 +3,11 @@ producto:
   property: Producto Profile Dev
 
 spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/db_producto?useSSL=false&serverTimezone=UTC
+
   jpa:
     show-sql: true
     generate-ddl: true
     hibernate:
       ddl-auto: update
-# Primero
