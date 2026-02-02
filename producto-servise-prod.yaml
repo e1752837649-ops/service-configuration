@@ -7,4 +7,6 @@ spring:
     generate-ddl: true
     hibernate:
       ddl-auto: update
-# Primero
+
+  datasource:
+    url: jdbc:mysql://localhost:3306/db_producto?useSSL=false&serverTimezone=UTC
